@@ -1,13 +1,15 @@
 """This module is used to create gpx files for iOS location simulation"""
 import os
 import sys
+import json
 from pymongo import MongoClient
 
 
 def gpx(user_routes):
     """
-    Fetches data from a specified mongodb and converts location data into a gpx file.
-    example of gpx file structure
+    Converts list of dicts with user and their routes into a gpx file for iOS location simulation
+
+    Example of gpx file structure:
     <gpx>
         <name>route1</name>
         <number>1</number>
@@ -20,6 +22,17 @@ def gpx(user_routes):
 
     Inputs:
         user_routes (list of dicts): list of dicts containing a user name and a route for each user
+        Example below:
+        [
+        {
+            'user': 'user name',
+            'route': [[latitude, longitude], [latitude, longitude], [latitude, longitude]...]
+        }
+        ...
+        ]
+
+    Output:
+        saves gpx files based on user's name and count of routes
     """
     # create gpx file
     header = '<gpx>\n'
@@ -30,7 +43,7 @@ def gpx(user_routes):
     users = {}
     for user_route in user_routes:
         # get data from query
-        user = user_route['name']
+        user = user_route['user']
         coords = user_route['route']
 
         # make a file for each route for each user
@@ -82,11 +95,42 @@ def fetch_data_mongodb():
     # query mongodb for data
     query_results = db_connection.locations.find().sort('_id', -1)
 
-    # format data into correct format
+    # format data into correct format for gpx()
     output_data = []
     for query_result in query_results:
         # get data from query
-        curr_data = {'name': query_result['user'], 'route': query_result['coordinates']}
+        curr_data = {'user': query_result['user'], 'route': query_result['coordinates']}
+        output_data.append(curr_data)
+
+    # return data
+    return output_data
+
+
+def fetch_data_json(data_file):
+    """
+    Fetches data from a json file and formats it into a format recognizable by gpx.
+
+    json file must be formatted as follows (latitude, longtiude are numbers):
+    [
+    {
+            "user": "user name",
+            "coordinates": [[latitude, longitude], [latitude, longitude], [latitude, longitude]...]
+    },
+    ...
+    ]
+
+    Output:
+        (list of dicts): list of dicts containing a user name and a route for each user
+    """
+    # read in file
+    with open(data_file) as data_file:
+        data_array = json.load(data_file)
+
+    # format data into correct format for gpx()
+    output_data = []
+    for data in data_array:
+        # get data from query
+        curr_data = {'user': data['user'], 'route': data['coordinates']}
         output_data.append(curr_data)
 
     # return data
@@ -99,7 +143,7 @@ if __name__ == '__main__':
         if sys.argv[1] == 'mongodb':
             gpx(fetch_data_mongodb())
         elif sys.argv[1] == 'json':
-            pass
+            gpx(fetch_data_json(sys.argv[2]))
         else:
             raise IndexError
     except IndexError:
