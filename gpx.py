@@ -7,7 +7,7 @@ from pymongo import MongoClient
 
 def gpx(user_routes):
     """
-    Converts list of dicts with user and their routes into a gpx file for iOS location simulation
+    Converts list of dicts with user and their route into a gpx file for iOS location simulation
 
     Example of gpx file structure:
     <gpx>
@@ -20,7 +20,7 @@ def gpx(user_routes):
         </wpt>
     </gpx>
 
-    Inputs:
+    Input:
         user_routes (list of dicts): list of dicts containing a user name and a route for each user
         Example below:
         [
@@ -42,7 +42,7 @@ def gpx(user_routes):
 
     users = {}
     for user_route in user_routes:
-        # get data from query
+        # pull out user and coordinates from route from current route
         user = user_route['user']
         coords = user_route['route']
 
@@ -99,7 +99,6 @@ def fetch_data_mongodb():
 
     Output:
         (list of dicts): list of dicts containing a user name and a route for each user
-
     """
     # setup mongo connection
     uri = 'mongodb://127.0.0.1/'
@@ -135,6 +134,9 @@ def fetch_data_json(data_file):
     },
     ...
     ]
+
+    Input:
+        data_file (string): filepath to JSON data
 
     Output:
         (list of dicts): list of dicts containing a user name and a route for each user
