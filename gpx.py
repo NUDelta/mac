@@ -72,6 +72,7 @@ def gpx(db_connection=None):
         # increment user route counter
         cnt += 1
 
+
 if __name__ == '__main__':
     # setup mongo connection
     URI = 'mongodb://127.0.0.1/'
