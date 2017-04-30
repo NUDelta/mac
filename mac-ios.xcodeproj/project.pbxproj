@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		593059EE1E906466007EB516 /* hj_0.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 593059ED1E906466007EB516 /* hj_0.gpx */; };
-		5930BC3A1EB532C200351FA5 /* kgarg_0.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5930BC391EB532C200351FA5 /* kgarg_0.gpx */; };
-		5930BC3C1EB5343400351FA5 /* kgarg_1.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5930BC3B1EB5343400351FA5 /* kgarg_1.gpx */; };
-		5930BC3E1EB53DAF00351FA5 /* kapil_unnamed.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5930BC3D1EB53DAF00351FA5 /* kapil_unnamed.gpx */; };
+		00385DDE1EB55CD200F6D61B /* example1.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 00385DDD1EB55CD200F6D61B /* example1.gpx */; };
+		5930BC3E1EB53DAF00351FA5 /* example2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5930BC3D1EB53DAF00351FA5 /* example2.gpx */; };
 		5955B4611E8F1DC6002A7262 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5955B4601E8F1DC6002A7262 /* AppDelegate.swift */; };
 		5955B4631E8F1DC6002A7262 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5955B4621E8F1DC6002A7262 /* ViewController.swift */; };
 		5955B4661E8F1DC6002A7262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5955B4641E8F1DC6002A7262 /* Main.storyboard */; };
@@ -18,7 +16,6 @@
 		5955B46B1E8F1DC6002A7262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5955B4691E8F1DC6002A7262 /* LaunchScreen.storyboard */; };
 		5955B4761E8F1DC6002A7262 /* mac_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5955B4751E8F1DC6002A7262 /* mac_iosTests.swift */; };
 		5955B4811E8F1DC6002A7262 /* mac_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5955B4801E8F1DC6002A7262 /* mac_iosUITests.swift */; };
-		5955B48F1E8F1E24002A7262 /* yk_0.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5955B48E1E8F1E24002A7262 /* yk_0.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		593059ED1E906466007EB516 /* hj_0.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hj_0.gpx; sourceTree = "<group>"; };
-		5930BC391EB532C200351FA5 /* kgarg_0.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kgarg_0.gpx; sourceTree = "<group>"; };
-		5930BC3B1EB5343400351FA5 /* kgarg_1.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kgarg_1.gpx; sourceTree = "<group>"; };
-		5930BC3D1EB53DAF00351FA5 /* kapil_unnamed.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kapil_unnamed.gpx; sourceTree = "<group>"; };
+		00385DDD1EB55CD200F6D61B /* example1.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example1.gpx; sourceTree = "<group>"; };
+		5930BC3D1EB53DAF00351FA5 /* example2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example2.gpx; sourceTree = "<group>"; };
 		5955B45D1E8F1DC6002A7262 /* mac-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mac-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5955B4601E8F1DC6002A7262 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5955B4621E8F1DC6002A7262 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +51,6 @@
 		5955B47C1E8F1DC6002A7262 /* mac-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mac-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5955B4801E8F1DC6002A7262 /* mac_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_iosUITests.swift; sourceTree = "<group>"; };
 		5955B4821E8F1DC6002A7262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5955B48E1E8F1E24002A7262 /* yk_0.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yk_0.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00385DDF1EB570C900F6D61B /* example-gpx-files */ = {
+			isa = PBXGroup;
+			children = (
+				00385DDD1EB55CD200F6D61B /* example1.gpx */,
+				5930BC3D1EB53DAF00351FA5 /* example2.gpx */,
+			);
+			name = "example-gpx-files";
+			sourceTree = "<group>";
+		};
 		5955B4541E8F1DC6002A7262 = {
 			isa = PBXGroup;
 			children = (
@@ -107,17 +110,13 @@
 		5955B45F1E8F1DC6002A7262 /* mac-ios */ = {
 			isa = PBXGroup;
 			children = (
+				00385DDF1EB570C900F6D61B /* example-gpx-files */,
 				5955B4601E8F1DC6002A7262 /* AppDelegate.swift */,
 				5955B4621E8F1DC6002A7262 /* ViewController.swift */,
 				5955B4641E8F1DC6002A7262 /* Main.storyboard */,
 				5955B4671E8F1DC6002A7262 /* Assets.xcassets */,
 				5955B4691E8F1DC6002A7262 /* LaunchScreen.storyboard */,
 				5955B46C1E8F1DC6002A7262 /* Info.plist */,
-				593059ED1E906466007EB516 /* hj_0.gpx */,
-				5955B48E1E8F1E24002A7262 /* yk_0.gpx */,
-				5930BC3B1EB5343400351FA5 /* kgarg_1.gpx */,
-				5930BC3D1EB53DAF00351FA5 /* kapil_unnamed.gpx */,
-				5930BC391EB532C200351FA5 /* kgarg_0.gpx */,
 			);
 			path = "mac-ios";
 			sourceTree = "<group>";
@@ -210,6 +209,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = W4E2C6X642;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					5955B4701E8F1DC6002A7262 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -248,13 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5955B48F1E8F1E24002A7262 /* yk_0.gpx in Resources */,
-				5930BC3A1EB532C200351FA5 /* kgarg_0.gpx in Resources */,
-				593059EE1E906466007EB516 /* hj_0.gpx in Resources */,
 				5955B46B1E8F1DC6002A7262 /* LaunchScreen.storyboard in Resources */,
 				5955B4681E8F1DC6002A7262 /* Assets.xcassets in Resources */,
-				5930BC3C1EB5343400351FA5 /* kgarg_1.gpx in Resources */,
-				5930BC3E1EB53DAF00351FA5 /* kapil_unnamed.gpx in Resources */,
+				5930BC3E1EB53DAF00351FA5 /* example2.gpx in Resources */,
+				00385DDE1EB55CD200F6D61B /* example1.gpx in Resources */,
 				5955B4661E8F1DC6002A7262 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.northwestern.delta.mac-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -452,6 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.northwestern.delta.mac-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

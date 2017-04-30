@@ -14,21 +14,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     @IBOutlet weak var mapView: MKMapView!
 
-    let regionRadius: CLLocationDistance = 500
+    let regionRadius: CLLocationDistance = 1000
     var locationManager:CLLocationManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        locationManager = CLLocationManager()
-
-        let initialLocation = CLLocation(latitude: 42.060126, longitude: -87.674241)
+        // setup map view
+        let initialLocation = CLLocation(latitude: 42.056940, longitude: -87.676548)
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.delegate = self
         mapView.setRegion(coordinateRegion, animated: false)
         mapView.showsUserLocation = true
+        
+        // setup location manager
+        locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         locationManager?.activityType = .fitness
@@ -38,9 +38,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             locationManager?.requestWhenInUseAuthorization()
         }
         
-        // We should always enable this for background location tracking.
-//        locationManager!.allowsBackgroundLocationUpdates = true
-//        locationManager!.pausesLocationUpdatesAutomatically = true
+        locationManager!.allowsBackgroundLocationUpdates = true
+        locationManager!.pausesLocationUpdatesAutomatically = true
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
@@ -51,7 +50,4 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
