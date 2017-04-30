@@ -66,6 +66,7 @@ def gpx(user_routes):
         for coord in coords:
             lat = coord[0]
             lng = coord[1]
+
             waypoint = indent + '<wpt lat=\"%f\" lon=\"%f\">\n' % (lat, lng)
             out_str += waypoint
             out_str += indent + wpt_end + '\n'
@@ -81,8 +82,24 @@ def fetch_data_mongodb():
     """
     Fetches data from a mongodb and formats it into a format recognizable by gpx.
 
+    The MongoDB must contain a collection with documents containing at least the information below
+    (latitude, longtiude are numbers):
+    [
+    {
+        "_id": {
+            "$oid":"58d9879554890e000996ddb5"
+            },
+        "created":1490651029,
+        "coordinates": [[latitude, longitude], [latitude, longitude], [latitude, longitude]...],
+        "user": "user name",
+        "lastModified":1490651029
+    }
+    ...
+    ]
+
     Output:
         (list of dicts): list of dicts containing a user name and a route for each user
+
     """
     # setup mongo connection
     uri = 'mongodb://127.0.0.1/'
@@ -108,9 +125,9 @@ def fetch_data_mongodb():
 
 def fetch_data_json(data_file):
     """
-    Fetches data from a json file and formats it into a format recognizable by gpx.
+    Fetches data from a JSON file and formats it into a format recognizable by gpx.
 
-    json file must be formatted as follows (latitude, longtiude are numbers):
+    The JSON file must be formatted as follows (latitude, longtiude are numbers):
     [
     {
             "user": "user name",
